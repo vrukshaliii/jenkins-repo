@@ -7,6 +7,6 @@ spec:
     app: MyApp
   ports:
     - protocol: TCP
-      port: 4444
+      port: 80
       targetPort: 4444
   type: NodePort
