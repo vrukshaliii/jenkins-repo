@@ -4,9 +4,9 @@ metadata:
   name: my-service
 spec:
   selector:
-    app: MyApp
+    app: ngnix
   ports:
     - protocol: TCP
-      port: 2618
+      port: 3232
       targetPort: 4444
   type: NodePort
