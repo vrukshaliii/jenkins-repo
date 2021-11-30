@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: co2-sample-app-deployment
   labels:
-    app: nginx
+    app: sample
+  name: sample
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: sample
   template:
     metadata:
       labels:
-        app: nginx
+        app: sample
     spec:
       containers:
-      - name: co2-sample-app
-        image: vrukshali26/sample:v1
-        ports:
-        - containerPort: 4444
+      - image: vrukshali26/sample:v1
+        imagePullPolicy: IfNotPresent
+        name: sample
+       
 
