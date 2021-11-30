@@ -1,12 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  labels:
+    app: sample
+  name: sample
 spec:
-  selector:
-    app: ngnix
   ports:
-    - protocol: TCP
-      port: 3232
-      targetPort: 4444
+  - port: 3111
+    protocol: TCP
+    targetPort: 4444
+  selector:
   type: NodePort
