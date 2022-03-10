@@ -35,7 +35,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: vrukshali26/sample:v1
+        image: vrukshali26/kpi-ninja-docker:v1
         ports:
         - containerPort: 4444
 
